@@ -38,20 +38,6 @@ public class PdfConvert extends Converter{
                 jpegDevice.process(pageCollection.get_Item(count), imageStream);
                 imageStream.close();
             }
-            
-//            com.aspose.pdf.facades.PdfConverter converter = new com.aspose.pdf.facades.PdfConverter();
-//            converter.bindPdf(inputFile);
-//            long start = new Date().getTime();
-//            converter.doConvert();
-////            converter.setResolution(new Resolution(width, height));
-//            PageSize pageSize = new PageSize(width, height);
-//            int count = 0;
-//            while (converter.hasNextImage() && count < pageToProcess){
-//                converter.getNextImage(pdfDir + count + ".jpg", pageSize, ImageFormat.getJpeg());
-//                count++;
-//            }
-//            converter.close();
-
             long end = new Date().getTime();
             return (end - start);
         } catch (IOException ex) {
