@@ -25,7 +25,7 @@ public class WordConvert extends Converter{
             long start = new Date().getTime();
             ImageSaveOptions imageSaveOptions = new ImageSaveOptions(SaveFormat.JPEG);
             // px per inch
-            imageSaveOptions.setResolution(width / 8.5f);
+            imageSaveOptions.setResolution(72);
             imageSaveOptions.setJpegQuality(100);
             for(int i = 0; i < pageToProcess; i++){
                 imageSaveOptions.setPageIndex(i);
@@ -34,6 +34,7 @@ public class WordConvert extends Converter{
             long end = new Date().getTime();
             return (end - start);
         } catch (Exception ex) {
+            System.err.println(ex.getMessage());
             return 0;
         }
     }
