@@ -1,0 +1,6 @@
+/target
+/.idea
+/*.iml
+/input-pdf-file.pdf
+/directory-out
+/input-doc-file.doc
