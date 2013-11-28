@@ -46,23 +46,23 @@ public class Main {
             System.out.println("-------------------------------------------");
         }
         
-        //WORD CONVERTION
-        WordConvert word = new WordConvert();
-        System.out.println("--------------- [ DETAILS ] ---------------");
-        System.out.println("File name: " + new File(wordInputFile).getName());
-        System.out.println("Image width: " + width + ", height: " + height);
-        System.out.println("--------------- [ RESULTS ] ---------------");
-        for(int i = 1; i < pageToProcess; i++){
-            average = 0;
-            for(int j = 0; j < numOfCicles; j++){
-                long time = word.convert(wordInputFile, width, height, outputDir, i);
-                if(time > 0){
-                    average += time;
-                }
-            }
-            System.out.println("Page count: " + i);
-            System.out.println("Time to extract images: " + average/numOfCicles + "ms");
-            System.out.println("-------------------------------------------");
-        }
+//        //WORD CONVERTION
+//        WordConvert word = new WordConvert();
+//        System.out.println("--------------- [ DETAILS ] ---------------");
+//        System.out.println("File name: " + new File(wordInputFile).getName());
+//        System.out.println("Image width: " + width + ", height: " + height);
+//        System.out.println("--------------- [ RESULTS ] ---------------");
+//        for(int i = 1; i < pageToProcess; i++){
+//            average = 0;
+//            for(int j = 0; j < numOfCicles; j++){
+//                long time = word.convert(wordInputFile, width, height, outputDir, i);
+//                if(time > 0){
+//                    average += time;
+//                }
+//            }
+//            System.out.println("Page count: " + i);
+//            System.out.println("Time to extract images: " + average/numOfCicles + "ms");
+//            System.out.println("-------------------------------------------");
+//        }
     }
 }
